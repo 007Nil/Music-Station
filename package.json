@@ -1,0 +1,23 @@
+{
+  "name": "testmusicstation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sagnik Sarkar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.0.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "hyperid": "^3.0.1",
+    "multer": "^1.4.5-lts.1",
+    "play": "^0.5.0",
+    "request": "^2.88.2",
+    "ytdl-core": "^4.11.2"
+  }
+}

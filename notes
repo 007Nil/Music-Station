@@ -1,0 +1,22 @@
+try {
+        var id = ytdl.getVideoID(url)
+    } catch {
+        res.json({ error: 'not a valid url or something like that' })
+        return;
+    }
+    console.log('downloading info: ' + id)
+    var info = await ytdl.getBasicInfo(id)
+    console.log('downloading video: '+info.videoDetails.title)
+    res.set(
+        {
+            'Content-disposition': `attachment; filename=${info.videoDetails.title}.mp4`,
+            'Content-Type': 'video/mp4'
+        }
+    )
+    ytdl(url, { filter: 'audioandvideo', quality: 'highestvideo' })
+        .pipe(res);
+        
+        
+AIzaSyA3sEOedpmYU4wbdm9OPbvi85FNkFySYAA
+https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyA3sEOedpmYU4wbdm9OPbvi85FNkFySYAA&type=video&q=attention
+https://youtu.be/EAyo3_zJj5c
